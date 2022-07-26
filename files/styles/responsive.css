@@ -1,0 +1,29 @@
+@media only screen and (max-width:900px) {
+    nav ul{
+        display: unset;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 30%;
+        /*background-color: #363B4E;*/
+        background-color: #363636;
+        height: 100vh;
+        z-index: 2;
+        padding: 2em 0;
+        transform: translateX(100%);
+        transition: transform .3s;
+    }
+    nav ul li a {
+        color: white;
+        display: block;
+        padding: .4em 1.5em;
+        font-size: 1.5rem;;
+        text-align: right;
+    }
+    .menu-btn, .exit-btn{
+        display: block;
+    }   
+    .exit-btn{
+        text-align: right;
+    } 
+}

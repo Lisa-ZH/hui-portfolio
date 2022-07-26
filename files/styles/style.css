@@ -1,0 +1,732 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #303030;
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Menu */
+header {
+    background-color: #363636;
+    /* transition: 0.4s; shrink header */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #363636;
+    padding: 1em 3em;
+    z-index: 50;
+}
+
+nav ul {
+    display: flex;
+    padding: .5em 0;
+    transform: translateX(0);
+}
+
+nav ul li a {
+    color: white;
+    display: block;
+    padding: .4em 1.5em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/* img.logo{
+    display: inline-block;
+    width: 20%;
+} */
+.logo {
+    width: 30%;
+}
+
+.logo img {
+    -webkit-transition-duration: 0, 8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    overflow: hidden;
+}
+
+.logo img:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.menu-btn,
+.exit-btn {
+    display: none;
+}
+
+.menu-btn {
+    width: 2em;
+    cursor: pointer;
+}
+
+.exit-btn img {
+    width: 2em;
+    margin: 2em;
+    cursor: pointer;
+}
+
+/* Name */
+#name {
+    padding: 10em 2em 2em 2em;
+    /* transition: 0.4s; shrink header */
+}
+
+.name-tag {
+    color: #fff;
+    ;
+    text-align: center;
+}
+
+.name-tag h1 {
+    font-size: 4rem;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.name-tag h3 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+
+/* About Me */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 9.5em 2em 2em 2em;
+}
+
+.about-container img {
+    width: 20%;
+}
+
+.about-container .content {
+    width: 70%;
+}
+
+.about-container p {
+    font-size: 1em;
+    line-height: 1.6em;
+    letter-spacing: 1px;
+    color: #818181;
+}
+
+/* My Work */
+.work-container {
+    background-color: #f6f6f6;
+    padding: 10em 2em 2em 2em;
+}
+
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.work-container h2 {
+    text-align: center;
+}
+
+.thumbnail {
+    margin: 0 auto;
+}
+
+.work .thumbnail .image {
+    width: 400px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.work.banner .thumbnail .image {
+    cursor: unset;
+}
+
+.work .thumbnail .image img {
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.work .thumbnail .image:hover img {
+    transform: scale(1.1);
+}
+
+.work h3 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.1em;
+    letter-spacing: .8px;
+    text-align: center;
+}
+
+/* Popup Window */
+.work-container .popup-image {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, .9);
+    height: 100%;
+    max-height: calc(200vh - 100px);
+    width: 100%;
+    z-index: 100;
+    display: none;
+    overflow-y: auto;
+}
+
+.work-container .popup-image span {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.work-container .popup-image img {
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+@media(max-width: 768px) {
+    .work-container .popup-image img {
+        width: 95%;
+    }
+}
+
+/* Resume */
+.resume-container {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+    padding: 10em 2em 2em 2em;
+}
+
+.resume-container .image {
+    border: 1px solid #333;
+}
+
+.resume-container img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* Contact */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f6f6f6;
+    padding: 10em 2em 2em 2em;
+    color: #818181;
+}
+
+.map {
+    height: 450px;
+    width: 40%;
+}
+
+.contact-form {
+    width: 40%;
+    padding: 20px;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
+    overflow: hidden;
+    margin-left: 60px;
+}
+
+.contact-form span {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+form {
+    position: relative;
+    width: 350px;
+}
+
+.form-group {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    display: block;
+    height: 36px;
+    width: 100%;
+    border: none;
+    border-radius: 0 !important;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 300;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.15);
+}
+
+.form-control:focus {
+    border-bottom: 2px solid rgb(3, 169, 245);
+    outline: none;
+    box-shadow: none;
+}
+
+.form-highlight {
+    position: absolute;
+    height: 60%;
+    width: 60px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.form-control:focus~.form-highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/*--  
+
+	Float Label  
+	
+--*/
+.float-label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 16px;
+    color: #999;
+    font-weight: 300;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.form-control:focus~.float-label,
+.form-control:valid~.float-label {
+    top: -15px;
+    font-size: 12px;
+}
+
+.form-group erroru,
+.form-group errorp {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 38px;
+    font-size: 11px;
+    color: #d34336;
+    font-weight: 300;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) all;
+    -moz-transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) all;
+    -webkit-transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) all;
+    opacity: 0;
+}
+
+.form-group erroru i,
+.form-group errorp i {
+    position: absolute;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    float: right;
+}
+
+.form-group erroru i svg,
+.form-group errorp i svg {
+    fill: #d34336;
+}
+
+.form-group[errr] .float-label {
+    color: #d34336 !important;
+}
+
+.form-group[errr] .form-control {
+    border-bottom: 1px solid #d34336 !important;
+}
+
+.form-group[errr] .form-control:focus {
+    border-bottom: 2px solid #d34336 !important;
+}
+
+
+.errortext {
+    color: red;
+    font-size: 12px;
+    padding: 3px;
+}
+
+input[type=checkbox] {
+    display: none;
+    visibility: hidden;
+}
+
+input[type="checkbox"]+label {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+input[type="checkbox"]+label:before {
+    display: inline-block;
+    content: "";
+    margin: 0 15px 3px 0px;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 2px solid #5a5a5a;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+input[type=checkbox]:checked+label:before {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwcHgiIGhlaWdodD0iMTVweCIgdmlld0JveD0iMCAwIDIwIDE1Ij4NCjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iNy4xNDMsMTQuOTM4IDAsNy43OTYgMi4wMjEsNS43NzYgNy4xNDMsMTAuODk4IDE3Ljk3OSwwLjA2MiAyMCwyLjA4MiAiLz4NCjwvc3ZnPg0K');
+    background-color: rgb(3, 169, 245);
+    border-color: rgb(3, 169, 245);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: 11px auto;
+    -moz-background-size: 11px auto;
+    -o-background-size: 11px auto;
+    background-size: 11px auto;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+}
+
+button[type="submit"] {
+    position: relative;
+    float: right;
+    font-family: inherit;
+    font-weight: 100;
+    font-size: 15px;
+    border: 0;
+    margin: -3px 0px;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    background: rgb(3, 169, 245);
+    color: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    /* Could be more or less, depending on screen size */
+    font-size: 14px;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #464646;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* -- highlighter animation --------------------------- */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-webkit-keyframes user-head {
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+
+@-moz-keyframes user-head {
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+
+@keyframes user-head {
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes user-body {
+    100% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+        -moz-transform: translateY(2px);
+    }
+}
+
+@-moz-keyframes user-body {
+    100% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+        -moz-transform: translateY(2px);
+    }
+}
+
+@keyframes user-body {
+    100% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+        -moz-transform: translateY(2px);
+    }
+}
+
+/*--  
+
+	ripple (该登录界面中还使用了一个有趣的特效-点击波特效。当在按钮上点击的时候，
+	一个光圈从被点击的点开始，会像冲击波一样向外辐射。在HTML代码中，
+	每个带有点击波特效的元素都有一个自定义的属性ripple。)  
+	
+--*/
+[ripple] {
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: box-shadow .4s;
+    -moz-transition: box-shadow .4s;
+    -ms-transition: box-shadow .4s;
+    -o-transition: box-shadow .4s;
+    transition: box-shadow .4s;
+    cursor: inherit;
+}
+
+[ripple] .touch {
+    background: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    border-radius: 100%;
+}
+
+/* -------------------------------- 
+
+Footer
+
+-------------------------------- */
+footer {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: right;
+    padding: 30px 30px 30px 0;
+    background-color: #363636;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* -------------------------------- 
+
+Slide In Elements
+
+-------------------------------- */
+.slideanim {
+    visibility: hidden;
+}
+
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .login {
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .login {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
