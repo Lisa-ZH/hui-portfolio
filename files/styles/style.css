@@ -55,14 +55,30 @@ nav ul {
 }
 
 nav ul li a {
+    position: relative;
     color: white;
     display: block;
-    padding: .4em 1.5em;
+    margin: .4em 1em;
+    padding-bottom: 5px;
     font-size: 1rem;
     text-transform: uppercase;
     text-align: right;
 }
-
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    border-bottom: 2px solid #fff;
+    -webkit-transition: 0.5s all ease-out;
+    -moz-transition: 0.5s all ease-out;
+    transition: 0.5s all ease-out;
+}
+nav ul li a:hover:before{
+    left: 0%;
+    right: 0%;
+}
 /* img.logo{
     display: inline-block;
     width: 20%;
