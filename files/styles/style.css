@@ -203,7 +203,7 @@ nav ul li a:hover:before{
     cursor: pointer;
 }
 
-.work.banner .thumbnail .image {
+.work.nocursor .thumbnail .image {
     cursor: unset;
 }
 
