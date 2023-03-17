@@ -46,6 +46,8 @@ nav {
     background-color: #363636;
     padding: 1em 3em;
     z-index: 50;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 nav ul {
@@ -129,13 +131,14 @@ nav ul li a:hover:before{
 }
 
 .name-tag {
+    max-width: 1600px;
+    margin: 0 auto;
     color: #fff;
-    ;
     text-align: center;
 }
 
 .name-tag h1 {
-    font-size: 4rem;
+    font-size: 4em;
     letter-spacing: 1px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -143,7 +146,7 @@ nav ul li a:hover:before{
 }
 
 .name-tag h3 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
     letter-spacing: 1px;
     transition: 0.4s;
 }
@@ -154,8 +157,9 @@ nav ul li a:hover:before{
     justify-content: space-between;
     align-items: center;
     width: 90%;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 9.5em 2em 2em 2em;
+    padding: 4em 2em;
 }
 
 .about-container img {
@@ -175,8 +179,10 @@ nav ul li a:hover:before{
 
 /* My Work */
 .work-container {
+    max-width: 1600px;
+    margin: 0 auto;
     background-color: #f6f6f6;
-    padding: 10em 2em 2em 2em;
+    padding: 4em 2em;
 }
 
 .work {
@@ -270,8 +276,9 @@ nav ul li a:hover:before{
     display: flex;
     justify-content: space-around;
     width: 60%;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 10em 2em 2em 2em;
+    padding: 4em 2em;
 }
 
 .resume-container .image {
@@ -285,20 +292,29 @@ nav ul li a:hover:before{
 
 /* Contact */
 .contact-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #f6f6f6;
+    padding: 4em 2em;
+}
+
+.contact-container .inner{
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    background-color: #f6f6f6;
-    padding: 10em 2em 2em 2em;
+    align-items: stretch;
     color: #818181;
 }
-
-.map {
-    height: 450px;
-    width: 40%;
+.contact-container .map {
+    width: 50%;
 }
 
-.contact-form {
-    width: 40%;
+.contact-container .map iframe{
+    height: 100%;
+}
+.contact-container .contact-form {
+    width: 50%;
     padding: 20px;
     border-radius: 3px;
     background: white;

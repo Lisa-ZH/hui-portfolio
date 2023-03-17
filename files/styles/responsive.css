@@ -1,10 +1,35 @@
+@media only screen and (max-width:1600px) {
+    .contact-container .inner{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:1200px) {
+    .map{
+        width: 40%;
+    }
+    .contact-container .map iframe{
+        width: 100%;
+    }
+    .contact-container .contact-form{
+        width: 60%;
+    }
+}
+@media only screen and (max-width:1000px) {
+.contact-container .map{
+    display: none;
+}
+.contact-container .contact-form{
+    width: 90%;
+    margin-left: 0;
+}
+}
 @media only screen and (max-width:900px) {
     nav ul{
         display: unset;
         position: fixed;
         top: 0;
         right: 0;
-        width: 25%;
+        width: 35%;
         /*background-color: #363B4E;*/
         background-color: #363636;
         height: 100vh;
@@ -18,7 +43,7 @@
         display: block;
         /* padding: .4em 1.5em; */
         margin: 0.4em 10px;
-        font-size: 1.5rem;
+        font-size: 1.2em;
         text-align: center;
         /* text-align: right; */
     }
@@ -28,4 +53,47 @@
     .exit-btn{
         text-align: right;
     } 
+    #name{
+        padding-top: 6em;
+    }
+    .name-tag h1 {
+        font-size: 3em;
+    }
+}
+@media only screen and (max-width:780px) {
+    .name-tag h3 {
+        font-size: 2em;
+    }
+    .about-container .content{
+        width: 100%;
+    }
+    .about-container img{
+        display: none;
+    }
+}
+@media only screen and (max-width:400px) {
+    .logo{
+        width: 50%;
+    }
+    nav ul{
+        width: 50%;
+    }
+    .work .thumbnail .image{
+        width: auto;
+    }
+    .name-tag h1 {
+        font-size: 2em;
+    }
+    .name-tag h3 {
+        font-size: 1.2em;
+    }
+    .about-container, .work-container, .resume-container{
+        padding-top: 2em;
+    }
+    .resume-container{
+        width: 100%;
+    }
+    .contact-container{
+        padding: 2em 0;
+    }
 }
