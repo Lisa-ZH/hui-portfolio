@@ -176,7 +176,12 @@ nav ul li a:hover:before{
     letter-spacing: 1px;
     color: #818181;
 }
-
+.about-container .mail{
+    font-weight: 700;
+    color: #000000;
+    font-style: italic;
+    text-decoration: underline;
+}
 /* My Work */
 .work-container {
     max-width: 1600px;
@@ -400,6 +405,11 @@ form {
 .form-control:valid~.float-label {
     top: -15px;
     font-size: 12px;
+}
+
+.float-label .star{
+    display: inline-block;
+    color: red;
 }
 
 .form-group erroru,

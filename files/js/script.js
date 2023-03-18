@@ -42,24 +42,25 @@ $(document).ready(function () {
 // }
 
 /* email Pop-up window */
-document.querySelectorAll('.work-container .popup img').forEach(image => {
-    image.onclick = () => {
-        document.querySelector('.popup-image').style.display = 'block';
-        document.querySelector('.popup-image img').src = image.getAttribute('src').replace("/thumbnail", "");
+// document.querySelectorAll('.work-container .popup img').forEach(image => {
+//     image.onclick = () => {
+//         document.querySelector('.popup-image').style.display = 'block';
+//         document.querySelector('.popup-image img').src = image.getAttribute('src').replace("/thumbnail", "");
 
-    }
-});
+//     }
+// });
 
-document.querySelector('.popup-image span').onclick = () => {
-    document.querySelector('.popup-image').style.display = 'none';
-}
-
-
+// document.querySelector('.popup-image span').onclick = () => {
+//     document.querySelector('.popup-image').style.display = 'none';
+// }
 
 /* mobile burger menu */
-const menuBtn = document.querySelector('.menu-btn'),
+/* document.querySelector('.menu-btn')*/
+const menuBtn = document.getElementById('#menu-btn'),
     menu = document.querySelector('nav ul'),
     exitBtn = document.querySelector('.exit-btn');
+
+console.log(menuBtn);
 
 menuBtn.addEventListener('click', () => {
     menu.style.transform = 'translateX(0)';
@@ -73,7 +74,8 @@ exitBtn.addEventListener('click', () => {
 $.fn.getModal = function (info) {
 
     var info = info.toString();
-
+    console.log(info);
+    
     if (info == "true") {
         $("#info").html('Thank you for your comment. I will contact you soon.').css('color', '#555').slideDown();
     } else {
